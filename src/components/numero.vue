@@ -1,7 +1,7 @@
 <template>
 <div>
 
-  <b-img-lazy :src="imgsrc"></b-img-lazy>
+  <b-img fluid :src="imgsrc"></b-img>
 
 </div>
 </template>
