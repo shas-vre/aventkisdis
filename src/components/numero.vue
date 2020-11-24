@@ -2,11 +2,10 @@
 <div>
 
 
-  <b-img v-if="currentdate <= date" fluid :src="imgsrc"></b-img>
+  <b-img v-if="currentdate < date" fluid :src="imgsrc"></b-img>
 
   <b-img v-else-if="isopen == false"  fluid :src="imgsrc" data-toggle="modal" data-target=".bd-example-modal-lg" @click="opening()"></b-img>
   <b-img v-else-if="isopen == true" fluid :src="imgend" data-toggle="modal" data-target=".bd-example-modal-lg"></b-img>
-
 
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -18,13 +17,10 @@
           </button>
         </div>
         <div class="modal-body">
-          <b-img fluid :src="imgmodal"></b-img>
+          <b-img fluid :src="imgmodal"  :key="imgmodal"></b-img>
         </div>
         <div class="modal-footer align-content-center">
-          <audio controls >
-            <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_1MG.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
+
         </div>
       </div>
     </div>
