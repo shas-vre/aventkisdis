@@ -1,14 +1,16 @@
 <template>
-<div>
+<div id="id" >
 
 
   <b-img v-if="currentdate < date" fluid :src="imgsrc"></b-img>
 
-  <b-img v-else-if="isopen == false"  fluid :src="imgsrc" data-toggle="modal" data-target=".bd-example-modal-lg" @click="opening()"></b-img>
-  <b-img v-else-if="isopen == true" fluid :src="imgend" data-toggle="modal" data-target=".bd-example-modal-lg"></b-img>
+  <b-img v-if="(currentdate > date) || (isopen === true)" fluid :src="imgend" data-toggle="modal" :data-target="'.bd-example-modal-xl'+date"></b-img>
 
-  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+
+  <b-img v-else-if=" (currentdate === date )||  (isopen === false)"  fluid :src="imgsrc" data-toggle="modal" :data-target="'.bd-example-modal-xl'+date" @click="opening()"></b-img>
+
+  <div  :class="'modal justify-content-center fade bd-example-modal-xl'+date" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Conseil du jour </h5>
@@ -18,9 +20,6 @@
         </div>
         <div class="modal-body">
           <b-img fluid :src="imgmodal"  :key="imgmodal"></b-img>
-        </div>
-        <div class="modal-footer align-content-center">
-
         </div>
       </div>
     </div>

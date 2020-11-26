@@ -1,9 +1,20 @@
 <template>
-  <div class="bg">
+  <div  class="bg">
 
   <div class="container">
     <b-row  class=" justify-content-md-center padding-0 no-gutters p-0 m-0">
+      <b-col class="justify-content-center">
+        <p class="texthaut">Calendrier de l'avent 2020 du bien etre</p>
+
+
+      </b-col>
+      <b-col >
+        <p class="texthautright">kisdis</p>
+      </b-col>
+    </b-row>
+    <b-row  class=" justify-content-md-center padding-0 no-gutters p-0 m-0">
       <b-col class="padding-0" >
+
         <numero id="14" imgsrc="/avent/CALENDRIER DE L'AVANT 2020/JOURS A OUVRIR/CALENDRIER-LIGNE-1-COLONE-1.jpg"
                 imgend="/avent/CALENDRIER DE L'AVANT 2020/JOURS OUVERTS/CALENDRIER-OUVERT-LIGNE-1-COLONE-1.jpg"
                 imgmodal="/avent/CALENDRIER DE L'AVANT 2020/IMAGES AFFICHEES/14-12.jpg" date="14"></numero>
@@ -177,6 +188,15 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.texthaut{
+  color: white;
+
+}
+.texthautright{
+  color: white;
+  text-align: right ;
+
 }
 .padding-0{
   padding-right:0;

@@ -65,6 +65,13 @@ export default {
   } ,
   name: "nump3"
 }
+          <audio controls >
+            <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_1MG.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+                <div class="modal-footer align-content-center">
+
+        </div>
 
 </script>
 
